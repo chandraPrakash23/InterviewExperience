@@ -17,9 +17,10 @@
         </div>
     </div>
     <div>
-        
-        <h1> {{fname}}</h1>
-        <h1>{{lname}}</h1>
+        {% if fname != None and lname != None %}
+            <h1> {{fname}}</h1>
+            <h1>{{lname}}</h1>
+        {% endif %}
     </div>
 </body>
 </html>
