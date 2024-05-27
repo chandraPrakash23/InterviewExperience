@@ -1,9 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 def index(request):
-    fname = request.GET.get('fname')
-    lname = request.GET.get('lname')
-    params = {'fname':fname,'lname':lname}
+    email = request.POST.get('email')
+    password = request.POST.get('password')
+    params = {'email':email,'password':password}
     return render(request,'index.html',params)
 
 def login(request):
