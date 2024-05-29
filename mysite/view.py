@@ -12,7 +12,7 @@ def index(request):
     params = {'email':email,'password':password}
     return render(request,'index.html',params)
 
-def login(request):
+def login_page(request):
     # page = 'login'
     # if request.user.is_authenticated: 
     #     return redirect('index')
@@ -35,7 +35,7 @@ def login(request):
     # context={'page':page}
     return render(request,'login.html')
 
-def register(request):
+def register_page(request):
     form = MyUserCreationForm()
     if request.method == 'POST':
         form = MyUserCreationForm(request.POST)
